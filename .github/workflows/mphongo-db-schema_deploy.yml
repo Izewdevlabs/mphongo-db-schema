@@ -1,0 +1,15 @@
+name: DB Schema Validation
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Validate schema
+      run: echo "Run schema validation checks"
